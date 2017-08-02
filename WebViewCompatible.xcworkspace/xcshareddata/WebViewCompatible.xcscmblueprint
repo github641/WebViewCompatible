@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "24C3EC94C46A906F72EFA7B26A93D3C106075A1E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "24C3EC94C46A906F72EFA7B26A93D3C106075A1E" : 9223372036854775807,
+    "AAE062EBF8472505FDB90B44DEE782F629380A0F" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EA8517C1-E667-499C-BF7C-AE0E2AC29141",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "24C3EC94C46A906F72EFA7B26A93D3C106075A1E" : "WebViewCompatible\/",
+    "AAE062EBF8472505FDB90B44DEE782F629380A0F" : "WebViewCompatible\/TOWebViewController\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WebViewCompatible",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WebViewCompatible.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/github641\/WebViewCompatible",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "24C3EC94C46A906F72EFA7B26A93D3C106075A1E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/TimOliver\/TOWebViewController",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AAE062EBF8472505FDB90B44DEE782F629380A0F"
+    }
+  ]
+}

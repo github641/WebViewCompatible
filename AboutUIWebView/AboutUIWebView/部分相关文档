@@ -1,0 +1,47 @@
+UIWebView
+
+Relationships
+You can use the UIWebView class to embed web content in your app. To do so, create a UIWebView object, attach it to a window, and send it a request to load web content. You can also use this class to move back and forward in the history of webpages, and you can even set some web content properties programmatically.
+
+Overview
+Note
+
+In apps that run in iOS 8 and later, use the WKWebView class instead of using UIWebView. Additionally, consider setting the WKPreferences property javaScriptEnabled to NO if you render files that are not supposed to run JavaScript.
+Important
+
+An iOS app linked on or after iOS 10.0 must include in its Info.plist file the usage description keys for the types of data it needs to access or it will crash. To access a user’s photo data specifically, it must include NSPhotoLibraryUsageDescription and NSCameraUsageDescription.
+Use the loadHTMLString:baseURL: method to begin loading local HTML files or the loadRequest: method to begin loading web content. Use the stopLoading method to stop loading, and the loading property to find out if a web view is in the process of loading.
+
+If you allow the user to move back and forward through the webpage history, then you can use the goBack and goForward methods as actions for buttons. Use the canGoBack and canGoForward properties to disable the buttons when the user can’t move in a direction.
+
+By default, a web view automatically converts telephone numbers that appear in web content to Phone links. When a Phone link is tapped, the Phone app launches and dials the number. To turn off this default behavior, set the dataDetectorTypes property with a UIDataDetectorTypes bitfield that does not contain the UIDataDetectorTypePhoneNumber flag.
+
+You can also use the scalesPageToFit property to programmatically set the scale of web content the first time it is displayed in a web view. Thereafter, the user can change the scale using gestures.
+
+Set the delegate property to an object conforming to the UIWebViewDelegate protocol if you want to track the loading of web content.
+
+Important
+
+不应该在UIScrollView中嵌入 tableView或者webView，因为点击事件的接收者可能混乱，会有手势冲突
+You should not embed UIWebView or UITableView objects in UIScrollView objects. If you do so, unexpected behavior can result because touch events for the two objects can be mixed up and wrongly handled.
+
+
+
+You can easily debug the HTML, CSS, and JavaScript contained inside a UIWebView with Web Inspector. Read Debugging Web Content on iOS to learn how to configure Web Inspector for iOS. Read the rest of Safari Web Content Guide to learn how to create web content that is optimized for Safari on iPhone and iPad.
+
+For information about basic view behaviors, see View Programming Guide for iOS.
+
+Supported File Formats
+
+webView可以展示Keynote, PDF, and Pages documents，但是为了富文本更好的效果，应当使用UITextView
+In addition to HTML content, UIWebView objects can be used to display other content types, such as Keynote, PDF, and Pages documents. For the best rendering of plain and rich text in your app, however, you should use UITextView instead.
+
+State Preservation 网页状态保存（url、缩放比例、滚动到的位置）
+
+In iOS 6 and later, if you assign a value to this view’s restorationIdentifier property, it attempts to preserve（保护） its URL history, the scaling and scrolling positions for each page, and information about which page is currently being viewed. During restoration, the view restores these values so that the web content appears just as it did before. For more information about how state preservation and restoration works, see App Programming Guide for iOS.
+
+For more information about appearance and behavior configuration, see Web Views.
+
+Subclassing Notes 不要写UIWebView的子类
+
+The UIWebView class should not be subclassed.

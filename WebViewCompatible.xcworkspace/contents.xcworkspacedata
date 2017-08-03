@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:TOWebViewController/TOWebViewControllerExample.xcodeproj">
+      location = "group:webView/webView.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:AboutUIWebView/AboutUIWebView.xcodeproj">
+      location = "group:TOWebViewController/TOWebViewControllerExample.xcodeproj">
    </FileRef>
 </Workspace>

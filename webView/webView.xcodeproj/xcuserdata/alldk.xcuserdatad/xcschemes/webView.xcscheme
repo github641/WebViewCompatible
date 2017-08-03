@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C79B1DA1F3166DD007DF4FF"
-               BuildableName = "AboutUIWebView.app"
-               BlueprintName = "AboutUIWebView"
-               ReferencedContainer = "container:AboutUIWebView.xcodeproj">
+               BlueprintIdentifier = "6C79B2241F31CE51007DF4FF"
+               BuildableName = "webView.app"
+               BlueprintName = "webView"
+               ReferencedContainer = "container:webView.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C79B1DA1F3166DD007DF4FF"
-            BuildableName = "AboutUIWebView.app"
-            BlueprintName = "AboutUIWebView"
-            ReferencedContainer = "container:AboutUIWebView.xcodeproj">
+            BlueprintIdentifier = "6C79B2241F31CE51007DF4FF"
+            BuildableName = "webView.app"
+            BlueprintName = "webView"
+            ReferencedContainer = "container:webView.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C79B1DA1F3166DD007DF4FF"
-            BuildableName = "AboutUIWebView.app"
-            BlueprintName = "AboutUIWebView"
-            ReferencedContainer = "container:AboutUIWebView.xcodeproj">
+            BlueprintIdentifier = "6C79B2241F31CE51007DF4FF"
+            BuildableName = "webView.app"
+            BlueprintName = "webView"
+            ReferencedContainer = "container:webView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C79B1DA1F3166DD007DF4FF"
-            BuildableName = "AboutUIWebView.app"
-            BlueprintName = "AboutUIWebView"
-            ReferencedContainer = "container:AboutUIWebView.xcodeproj">
+            BlueprintIdentifier = "6C79B2241F31CE51007DF4FF"
+            BuildableName = "webView.app"
+            BlueprintName = "webView"
+            ReferencedContainer = "container:webView.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

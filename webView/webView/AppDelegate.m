@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  AboutUIWebView
+//  webView
 //
 //  Created by alldk on 2017/8/2.
 //  Copyright © 2017年 alldk. All rights reserved.

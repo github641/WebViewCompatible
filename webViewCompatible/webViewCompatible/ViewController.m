@@ -23,37 +23,71 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
     NSString *s= @"https://www.baidu.com";
-    s = @"http://toutiao.eastday.com/?qid=diazh";
+    //    s = @"http://toutiao.eastday.com/?qid=diazh";
     
-//    self.vc =(UIViewController *) [WebviewCompatibleTool showWebWithURL:s];
+    // 判断，当前显示的控制器是否有 navi管理：有则push，无则present
+    
+    [self toWebBrowserWithPush:YES url:s];
+    
+}
+- (void)toWebBrowserWithPush:(BOOL)isPush url:(NSString *)url{
+    
+    
+    
+    
+    
+    //    self.vc =(UIViewController *) [WebviewCompatibleTool showWebWithURL:s];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {//SFSafariViewController
         NSLog(@"~>9.0");
-    }else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){//WKWebView
-        NSLog(@"~>8.0");
+        
+        
+        // TOWebViewController的处理
+//        TOWebViewController *tovc =  [[TOWebViewController alloc] initWithURLString:url];
+//        if (isPush) {
+//            
+//            self.vc = tovc;
+//        }else{
+//            tovc.showDoneButton = YES;
+//            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:tovc];
+//            self.vc = navi;
+//        }
+        
+        // DZNWebViewController处理
         self.vc = [[DZNWebViewController alloc] initWithURL:[NSURL URLWithString:s]];
         
-//        self.vc = [[TOWebViewController alloc] initWithURLString:s];
+        
+    }else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){//WKWebView
+        NSLog(@"~>8.0");
+        //
+        
         
     }else{//UIWebView
         NSLog(@"~<7.0");
-self.vc = [[TOWebViewController alloc] initWithURLString:s];
+        
+        
     }
-
     
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:self.vc ?:[UIViewController new]];
-    [self presentViewController:navi animated:YES completion:^{
-        
-        
-        
-    }];
-//    [self.navigationController pushViewController:self.vc animated:YES];
+    
+    //    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:self.vc ?:[UIViewController new]];
+    
+    if (isPush) {
+        [self.navigationController pushViewController:self.vc animated:YES];
+    }else{
+        [self presentViewController:self.vc animated:YES completion:^{
+            
+        }];
+    }
+    //
+    
+    
+    
+    
     
 }
 

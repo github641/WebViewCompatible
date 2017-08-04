@@ -2,3 +2,7 @@
 UIWebview、WKWebView、SafariViewcontroller的兼容与运用，
 希望在iOS6-7使用UIWebView（TOWebViewController），在iOS8-iOS9使用WKWebView（DZNWebViewController），在iOS9+使用SafariViewController达成in-app browse的目的。
 对这些API进行学习，对使用这些API的优秀开源项目进行学习。
+
+为了兼容这两个项目，分别folk，并做了简化。这个项目将把以下两个项目合并到一起，并做兼容工作。
+https://github.com/github641/DZNWebViewController
+https://github.com/github641/TOWebViewController

@@ -5,6 +5,16 @@
 //  Created by alldk on 2017/8/2.
 //  Copyright © 2017年 alldk. All rights reserved.
 //
+/* lzy注170804：
+ 整体过了一遍API文档。WebKit是iOS和Mac OSX的统一API。且OSX中有许多『window』、『DOM』相关的内容
+ /Users/alldk/Library/Developer/Shared/Documentation/DocSets/com.apple.adc.documentation.docset/Contents/Resources/Documents/documentation/cocoa/displayWebContent
+ 
+ 
+ 这是webKit的文档。比较老，且对于iOS的展示作用不大，主要针对OSX。
+ 
+ 
+ 
+ */
 
 /*
  * Copyright (C) 2014 Apple Inc. All rights reserved.

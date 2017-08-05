@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <WebKit/WebKit.h>
+#import <SafariServices/SafariServices.h>
 
 @interface ViewController ()
 

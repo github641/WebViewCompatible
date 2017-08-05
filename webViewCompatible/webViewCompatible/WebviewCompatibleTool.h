@@ -10,5 +10,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WebviewCompatibleTool : NSObject
-+ (id)showWebWithURL:(NSString *)url;
++ (void)from:(UIViewController *)from toWebBrowserWithPush:(BOOL)isPush url:(NSString *)url;
 @end

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3354961F355EAC006D9804 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3354951F355EAC006D9804 /* SafariServices.framework */; };
+		6C3354981F355EB2006D9804 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3354971F355EB2006D9804 /* WebKit.framework */; };
+		6C33549A1F356B6B006D9804 /* SafariViewController in Resources */ = {isa = PBXBuildFile; fileRef = 6C3354991F356B6B006D9804 /* SafariViewController */; };
 		6C79B22A1F31CE51007DF4FF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B2291F31CE51007DF4FF /* main.m */; };
 		6C79B22D1F31CE51007DF4FF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B22C1F31CE51007DF4FF /* AppDelegate.m */; };
 		6C79B2301F31CE51007DF4FF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C79B22F1F31CE51007DF4FF /* ViewController.m */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C3354951F355EAC006D9804 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		6C3354971F355EB2006D9804 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6C3354991F356B6B006D9804 /* SafariViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SafariViewController; sourceTree = "<group>"; };
 		6C79B2251F31CE51007DF4FF /* webView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C79B2291F31CE51007DF4FF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C79B22B1F31CE51007DF4FF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,17 +44,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C3354981F355EB2006D9804 /* WebKit.framework in Frameworks */,
+				6C3354961F355EAC006D9804 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C3354941F355EAC006D9804 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6C3354971F355EB2006D9804 /* WebKit.framework */,
+				6C3354951F355EAC006D9804 /* SafariServices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C79B21C1F31CE51007DF4FF = {
 			isa = PBXGroup;
 			children = (
 				6C79B2271F31CE51007DF4FF /* webView */,
 				6C79B2261F31CE51007DF4FF /* Products */,
+				6C3354941F355EAC006D9804 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +118,7 @@
 		6C79B2441F31CEC6007DF4FF /* SafariViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6C3354991F356B6B006D9804 /* SafariViewController */,
 			);
 			path = SafariViewController;
 			sourceTree = "<group>";
@@ -173,6 +192,7 @@
 				6C79B2381F31CE51007DF4FF /* LaunchScreen.storyboard in Resources */,
 				6C79B2431F31CE96007DF4FF /* 部分相关文档 in Resources */,
 				6C79B2351F31CE51007DF4FF /* Assets.xcassets in Resources */,
+				6C33549A1F356B6B006D9804 /* SafariViewController in Resources */,
 				6C79B2331F31CE51007DF4FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

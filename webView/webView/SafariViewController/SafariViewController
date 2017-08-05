@@ -1,0 +1,27 @@
+SafariViewcontroller的API都比较简单。
+
+在SafariService.framework中。
+
+头文件过了一遍，东西比较少。
+api文档过了一遍，东西也比较少。
+
+present modally
+done btn
+
+不能编辑的访问地址
+
+action btn
+
+代理中可以返回自定义的不同的activity
+
+初始化时可以指定是否在支持『阅读模式』的网页上，加载完毕之后，自动进入『阅读模式』
+
+导航栏的tint color
+导航栏按钮的 tint color
+
+将某个网页加入到 『reading list』，它是iOS7的api哦
+
+在Safari中打开的动作
+
+
+

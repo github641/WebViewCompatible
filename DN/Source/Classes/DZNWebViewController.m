@@ -56,6 +56,12 @@ static char DZNWebViewControllerKVOContext = 0;
 
 #pragma mark - ================== DZNWebViewController ==================
 @interface DZNWebViewController ()
+/* lzy注170805：
+ TO done btn 移植
+ */
+@property (nonatomic,strong) UIBarButtonItem *doneButton;             /* The 'Done' button for modal contorllers */
+@property (nonatomic,readonly) BOOL beingPresentedModally;            /* The controller was presented as a modal popup (eg, 'Done' button) */
+@property (nonatomic,readonly) BOOL onTopOfNavigationControllerStack; /* We're in, and not the root of a UINavigationController (eg, 'Back' button)*/
 
 @property (nonatomic, strong) UIBarButtonItem *backwardBarItem;
 @property (nonatomic, strong) UIBarButtonItem *forwardBarItem;
@@ -126,6 +132,10 @@ static char DZNWebViewControllerKVOContext = 0;
     
     [self.webView addObserver:self forKeyPath:@"loading" options:NSKeyValueObservingOptionNew context:&DZNWebViewControllerKVOContext];
     self.completedInitialLoad = NO;
+    /* lzy注170805：
+     TO 的 done btn
+     */
+    self.showDoneButton = YES;
 }
 
 
@@ -142,6 +152,63 @@ static char DZNWebViewControllerKVOContext = 0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    /* lzy注170805：
+     TO done btn 移植
+     */
+    [self createDoneBtn];
+}
+
+- (BOOL)onTopOfNavigationControllerStack
+{
+    if (self.navigationController == nil)
+        return NO;
+    
+    if ([self.navigationController.viewControllers count] && [self.navigationController.viewControllers indexOfObject:self] > 0)
+        return YES;
+    
+    return NO;
+}
+- (BOOL)beingPresentedModally
+{
+    // Check if we have a parent navigation controller, it's being presented modally,
+    // and if it is, that we are its root view controller
+    if (self.navigationController && self.navigationController.presentingViewController)
+        return ([self.navigationController.viewControllers indexOfObject:self] == 0);
+    else // Check if we're being presented modally directly
+        return ([self presentingViewController] != nil);
+    
+    return NO;
+}
+- (void)doneButtonTapped:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+- (void)createDoneBtn{
+    // Create the Done button
+    if (self.showDoneButton && self.beingPresentedModally && !self.onTopOfNavigationControllerStack) {
+        if (self.doneButtonTitle) {
+            self.doneButton = [[UIBarButtonItem alloc] initWithTitle:self.doneButtonTitle style:UIBarButtonItemStyleDone
+                                                              target:self
+                                                              action:@selector(doneButtonTapped:)];
+        }
+        else {
+            self.doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                            target:self
+                                                                            action:@selector(doneButtonTapped:)];
+        }
+        
+    }
+
+}
+
+- (void)addDoneBtn{
+    //Layout the buttons
+    [UIView performWithoutAnimation:^{
+        // Set up the Done button if presented modally
+        if (self.doneButton) {
+            self.navigationItem.rightBarButtonItem = self.doneButton;
+        }
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -568,6 +635,10 @@ static char DZNWebViewControllerKVOContext = 0;
     }
     else {
         [self setToolbarItems:[self navigationToolItems]];
+        /* lzy注170805：
+         添加done btn
+         */
+        [self addDoneBtn];
     }
     
     self.toolbar = self.navigationController.toolbar;

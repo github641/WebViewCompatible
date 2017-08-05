@@ -938,6 +938,9 @@
 
 - (void)doneButtonTapped:(id)sender
 {
+    /* lzy注170805：
+     self.modalCompletionHandler 不是很明白。
+     */
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.modalCompletionHandler];
 }
 

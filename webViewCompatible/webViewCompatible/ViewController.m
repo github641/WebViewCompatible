@@ -32,45 +32,48 @@
     
     // 判断，当前显示的控制器是否有 navi管理：有则push，无则present
     
-    [self toWebBrowserWithPush:YES url:s];
+    [self toWebBrowserWithPush:NO url:s];
     
 }
 - (void)toWebBrowserWithPush:(BOOL)isPush url:(NSString *)url{
-    
-    
-    
-    
+
     
     //    self.vc =(UIViewController *) [WebviewCompatibleTool showWebWithURL:s];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {//SFSafariViewController
         NSLog(@"~>9.0");
-        
-        
-        // TOWebViewController的处理
-//        TOWebViewController *tovc =  [[TOWebViewController alloc] initWithURLString:url];
-//        if (isPush) {
-//            
-//            self.vc = tovc;
-//        }else{
-//            tovc.showDoneButton = YES;
-//            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:tovc];
-//            self.vc = navi;
-//        }
-        
-        // DZNWebViewController处理
-        self.vc = [[DZNWebViewController alloc] initWithURL:[NSURL URLWithString:s]];
-        
+
         
     }else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){//WKWebView
         NSLog(@"~>8.0");
-        //
+        // DZNWebViewController处理
+        DZNWebViewController *tovc = [[DZNWebViewController alloc] initWithURL:[NSURL URLWithString:url]];
+        
+        
+        if (isPush) {
+            
+            self.vc = tovc;
+        }else{
+            tovc.showDoneButton = YES;
+            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:tovc];
+            self.vc = navi;
+        }
         
         
     }else{//UIWebView
         NSLog(@"~<7.0");
         
         
+        //         TOWebViewController的处理
+        TOWebViewController *tovc =  [[TOWebViewController alloc] initWithURLString:url];
+        if (isPush) {
+            
+            self.vc = tovc;
+        }else{
+            tovc.showDoneButton = YES;
+            UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:tovc];
+            self.vc = navi;
+        }
     }
     
     
@@ -84,10 +87,7 @@
         }];
     }
     //
-    
-    
-    
-    
+
     
 }
 

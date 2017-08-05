@@ -69,6 +69,25 @@ typedef NS_OPTIONS(NSUInteger, DZNWebNavigationPrompt) {
  */
 @interface DZNWebViewController : UIViewController <DZNNavigationDelegate, WKUIDelegate, UITableViewDataSource, UITableViewDelegate>
 
+/* lzy注170805：
+ 把TO的『done』按钮的移植过来
+ */
+/**
+ Shows the Done button when presented modally. When tapped, it dismisses the view controller.
+ 
+ Default value is YES.
+ */
+@property (nonatomic,assign)    BOOL showDoneButton;
+
+/**
+ If desired, override the title of the system 'Done' button to this string.
+ 
+ Default value is nil.
+ */
+@property (nonatomic,copy)    NSString *doneButtonTitle;
+
+
+
 /** The web view that the controller manages. */
 @property (nonatomic, strong) DZNWebView *webView;
 /** The URL identifying the location of the content to load. */

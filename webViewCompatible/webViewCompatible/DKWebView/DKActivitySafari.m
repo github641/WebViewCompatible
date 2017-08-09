@@ -1,5 +1,5 @@
 //
-//  TOActivitySafari.m
+//  DKActivitySafari.m
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -20,9 +20,9 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "TOActivitySafari.h"
+#import "DKActivitySafari.h"
 
-NSString *const TOActivityTypeSafari = @"au.com.timoliver.TOActivityTypeSafari";
+NSString *const DKActivityTypeSafari = @"com.alldk.DKActivityTypeSafari";
 
 /* Detect if we're running iOS 7.0 or higher */
 #ifndef NSFoundationVersionNumber_iOS_6_1
@@ -33,7 +33,7 @@ NSString *const TOActivityTypeSafari = @"au.com.timoliver.TOActivityTypeSafari";
 /* Detect which user idiom we're running on */
 #define IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-@interface TOActivitySafari ()
+@interface DKActivitySafari ()
 
 /* The URL to load */
 @property (nonatomic, strong) NSURL *url;
@@ -42,12 +42,12 @@ NSString *const TOActivityTypeSafari = @"au.com.timoliver.TOActivityTypeSafari";
 
 @end
 
-@implementation TOActivitySafari
+@implementation DKActivitySafari
 
 #pragma mark - Activity Display Properties -
 - (NSString *)activityType
 {
-    return TOActivityTypeSafari;
+    return DKActivityTypeSafari;
 }
 
 - (NSString *)activityTitle
@@ -57,7 +57,7 @@ NSString *const TOActivityTypeSafari = @"au.com.timoliver.TOActivityTypeSafari";
 
 - (UIImage *)activityImage
 {
-    return [TOActivitySafari sharedActivityImage];
+    return [DKActivitySafari sharedActivityImage];
 }
 
 #pragma mark - Activity Action Handlers -

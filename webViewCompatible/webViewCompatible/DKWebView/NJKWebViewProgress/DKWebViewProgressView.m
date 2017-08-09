@@ -1,13 +1,13 @@
 //
-//  NJKWebViewProgressView.m
+//  DKWebViewProgressView.m
 //
 //  Created by Satoshi Aasanoon 11/16/13.
 //  Copyright (c) 2013 Satoshi Asano. All rights reserved.
 //
 
-#import "NJKWebViewProgressView.h"
+#import "DKWebViewProgressView.h"
 
-@implementation NJKWebViewProgressView
+@implementation DKWebViewProgressView
 
 - (id)initWithFrame:(CGRect)frame
 {

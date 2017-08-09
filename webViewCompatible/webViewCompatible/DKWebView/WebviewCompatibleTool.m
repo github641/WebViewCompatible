@@ -7,12 +7,12 @@
 //
 
 #import "WebviewCompatibleTool.h"
-#import "TOWebViewController.h"
-#import "DZNWebViewController.h"
+#import "DKUIWebViewController.h"
+#import "DKWKWebViewController.h"
 
 #import <SafariServices/SafariServices.h>
 
-#import "Macro.h"
+#define SV_GREATER_THAN_OR_EQUAL_TO(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 @interface NSString(DK)
 - (BOOL)isNotBlank;
@@ -45,13 +45,14 @@
     
     UIViewController *vc;
     
-    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
+    if (SV_GREATER_THAN_OR_EQUAL_TO(@"9.0")) {
         vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:url]];
         
-    }else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")){//WKWebView
+    }else if (SV_GREATER_THAN_OR_EQUAL_TO(@"8.0")){//WKWebView
         
         // DZNWebViewController处理
-        DZNWebViewController *tovc = [[DZNWebViewController alloc] initWithURL:[NSURL URLWithString:url]];
+//        DKWKWebViewController *tovc = [[DKWKWebViewController alloc] initWithURL:[NSURL URLWithString:url] tab:NO];
+                DKUIWebViewController *tovc =  [[DKUIWebViewController alloc] initWithURLString:url];
         
         if (isPush) {
             
@@ -64,7 +65,7 @@
         
     }else{//UIWebView
         //         TOWebViewController的处理
-        TOWebViewController *tovc =  [[TOWebViewController alloc] initWithURLString:url];
+        DKUIWebViewController *tovc =  [[DKUIWebViewController alloc] initWithURLString:url];
         if (isPush) {
             
             vc = tovc;

@@ -1,5 +1,5 @@
 //
-//  TOActivitySafari.h
+//  DKActivitySafari.h
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -22,8 +22,8 @@
 
 #import <UIKit/UIKit.h>
 
-extern NSString *const TOActivityTypeSafari;
+extern NSString *const DKActivityTypeSafari;
 
-@interface TOActivitySafari : UIActivity
+@interface DKActivitySafari : UIActivity
 
 @end

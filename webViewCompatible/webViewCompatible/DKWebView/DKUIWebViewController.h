@@ -1,5 +1,5 @@
 //
-//  TOWebViewController.h
+//  DKUIWebViewController.h
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -22,23 +22,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TOWebViewController : UIViewController <UIWebViewDelegate>
+@interface DKUIWebViewController : UIViewController <UIWebViewDelegate>
 
 /**
- Initializes a new `TOWebViewController` object with the specified URL.
+ Initializes a new `DKUIWebViewController` object with the specified URL.
  
  @param url The URL to the web page that the controller will initially display.
  
- @return The newly initialized `TOWebViewController` object.
+ @return The newly initialized `DKUIWebViewController` object.
  */
 - (instancetype)initWithURL:(NSURL *)url;
 
 /**
- Initializes a new `TOWebViewController` object with the specified URL string.
+ Initializes a new `DKUIWebViewController` object with the specified URL string.
  
  @param urlString The URL as a string, of the web page that the controller will initially display.
  
- @return The newly initialized `TOWebViewController` object.
+ @return The newly initialized `DKUIWebViewController` object.
  */
 - (instancetype)initWithURLString:(NSString *)urlString;
 

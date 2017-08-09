@@ -9,51 +9,54 @@
 /* Begin PBXBuildFile section */
 		6C33549C1F356EE0006D9804 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C33549B1F356EE0006D9804 /* SafariServices.framework */; };
 		6C42508A1F3460DB00BCD710 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250891F3460DB00BCD710 /* main.m */; };
-		6C42508D1F3460DB00BCD710 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42508C1F3460DB00BCD710 /* AppDelegate.m */; };
 		6C4250901F3460DB00BCD710 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42508F1F3460DB00BCD710 /* ViewController.m */; };
 		6C4250931F3460DB00BCD710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4250911F3460DB00BCD710 /* Main.storyboard */; };
 		6C4250951F3460DB00BCD710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4250941F3460DB00BCD710 /* Assets.xcassets */; };
 		6C4250981F3460DB00BCD710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4250961F3460DB00BCD710 /* LaunchScreen.storyboard */; };
-		6C4250B21F34614400BCD710 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250A81F34614300BCD710 /* NJKWebViewProgress.m */; };
-		6C4250B31F34614400BCD710 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250AA1F34614400BCD710 /* NJKWebViewProgressView.m */; };
-		6C4250B41F34614400BCD710 /* TOActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250AC1F34614400BCD710 /* TOActivitySafari.m */; };
-		6C4250B51F34614400BCD710 /* TOWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250AE1F34614400BCD710 /* TOWebViewController.m */; };
-		6C4250B61F34614400BCD710 /* UIImage+TOWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250B01F34614400BCD710 /* UIImage+TOWebViewControllerIcons.m */; };
-		6C4250B71F34614400BCD710 /* 说明.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C4250B11F34614400BCD710 /* 说明.txt */; };
-		6C4250BD1F34615600BCD710 /* DZNWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250BB1F34615600BCD710 /* DZNWebViewController.m */; };
-		6C4250C01F34618C00BCD710 /* WebviewCompatibleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4250BF1F34618C00BCD710 /* WebviewCompatibleTool.m */; };
 		6C4250C51F346DD900BCD710 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C4250C41F346DD900BCD710 /* WebKit.framework */; };
+		6C6DF2AE1F3AF68200F1CCEC /* DKActivitySafari.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF29D1F3AF68200F1CCEC /* DKActivitySafari.m */; };
+		6C6DF2AF1F3AF68200F1CCEC /* DKUIWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF29F1F3AF68200F1CCEC /* DKUIWebViewController.m */; };
+		6C6DF2B01F3AF68200F1CCEC /* DKWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2A21F3AF68200F1CCEC /* DKWKWebViewController.m */; };
+		6C6DF2B11F3AF68200F1CCEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C6DF2A31F3AF68200F1CCEC /* Info.plist */; };
+		6C6DF2B21F3AF68200F1CCEC /* DKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2A61F3AF68200F1CCEC /* DKWebViewProgress.m */; };
+		6C6DF2B31F3AF68200F1CCEC /* DKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2A81F3AF68200F1CCEC /* DKWebViewProgressView.m */; };
+		6C6DF2B41F3AF68200F1CCEC /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6C6DF2A91F3AF68200F1CCEC /* ReadMe.txt */; };
+		6C6DF2B51F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2AB1F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.m */; };
+		6C6DF2B61F3AF68200F1CCEC /* WebviewCompatibleTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2AD1F3AF68200F1CCEC /* WebviewCompatibleTool.m */; };
+		6C6DF2B91F3AF6D600F1CCEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6DF2B81F3AF6D600F1CCEC /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C33549B1F356EE0006D9804 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		6C4250851F3460DB00BCD710 /* webViewCompatible.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = webViewCompatible.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4250891F3460DB00BCD710 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6C42508B1F3460DB00BCD710 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6C42508C1F3460DB00BCD710 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C42508E1F3460DB00BCD710 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C42508F1F3460DB00BCD710 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C4250921F3460DB00BCD710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C4250941F3460DB00BCD710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C4250971F3460DB00BCD710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C4250991F3460DB00BCD710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6C4250A71F34614300BCD710 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
-		6C4250A81F34614300BCD710 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
-		6C4250A91F34614300BCD710 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
-		6C4250AA1F34614400BCD710 /* NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgressView.m; sourceTree = "<group>"; };
-		6C4250AB1F34614400BCD710 /* TOActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOActivitySafari.h; sourceTree = "<group>"; };
-		6C4250AC1F34614400BCD710 /* TOActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOActivitySafari.m; sourceTree = "<group>"; };
-		6C4250AD1F34614400BCD710 /* TOWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWebViewController.h; sourceTree = "<group>"; };
-		6C4250AE1F34614400BCD710 /* TOWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWebViewController.m; sourceTree = "<group>"; };
-		6C4250AF1F34614400BCD710 /* UIImage+TOWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TOWebViewControllerIcons.h"; sourceTree = "<group>"; };
-		6C4250B01F34614400BCD710 /* UIImage+TOWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TOWebViewControllerIcons.m"; sourceTree = "<group>"; };
-		6C4250B11F34614400BCD710 /* 说明.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "说明.txt"; sourceTree = "<group>"; };
-		6C4250BA1F34615600BCD710 /* DZNWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DZNWebViewController.h; path = ../../DN/Source/Classes/DZNWebViewController.h; sourceTree = "<group>"; };
-		6C4250BB1F34615600BCD710 /* DZNWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DZNWebViewController.m; path = ../../DN/Source/Classes/DZNWebViewController.m; sourceTree = "<group>"; };
-		6C4250BE1F34618C00BCD710 /* WebviewCompatibleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewCompatibleTool.h; sourceTree = "<group>"; };
-		6C4250BF1F34618C00BCD710 /* WebviewCompatibleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewCompatibleTool.m; sourceTree = "<group>"; };
 		6C4250C21F346C9400BCD710 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		6C4250C41F346DD900BCD710 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		6C6DF29C1F3AF68200F1CCEC /* DKActivitySafari.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKActivitySafari.h; sourceTree = "<group>"; };
+		6C6DF29D1F3AF68200F1CCEC /* DKActivitySafari.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKActivitySafari.m; sourceTree = "<group>"; };
+		6C6DF29E1F3AF68200F1CCEC /* DKUIWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKUIWebViewController.h; sourceTree = "<group>"; };
+		6C6DF29F1F3AF68200F1CCEC /* DKUIWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKUIWebViewController.m; sourceTree = "<group>"; };
+		6C6DF2A01F3AF68200F1CCEC /* DKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKWebView.h; sourceTree = "<group>"; };
+		6C6DF2A11F3AF68200F1CCEC /* DKWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKWKWebViewController.h; sourceTree = "<group>"; };
+		6C6DF2A21F3AF68200F1CCEC /* DKWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKWKWebViewController.m; sourceTree = "<group>"; };
+		6C6DF2A31F3AF68200F1CCEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6C6DF2A51F3AF68200F1CCEC /* DKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKWebViewProgress.h; sourceTree = "<group>"; };
+		6C6DF2A61F3AF68200F1CCEC /* DKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKWebViewProgress.m; sourceTree = "<group>"; };
+		6C6DF2A71F3AF68200F1CCEC /* DKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKWebViewProgressView.h; sourceTree = "<group>"; };
+		6C6DF2A81F3AF68200F1CCEC /* DKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKWebViewProgressView.m; sourceTree = "<group>"; };
+		6C6DF2A91F3AF68200F1CCEC /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
+		6C6DF2AA1F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DKWebViewControllerIcons.h"; sourceTree = "<group>"; };
+		6C6DF2AB1F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DKWebViewControllerIcons.m"; sourceTree = "<group>"; };
+		6C6DF2AC1F3AF68200F1CCEC /* WebviewCompatibleTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebviewCompatibleTool.h; sourceTree = "<group>"; };
+		6C6DF2AD1F3AF68200F1CCEC /* WebviewCompatibleTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebviewCompatibleTool.m; sourceTree = "<group>"; };
+		6C6DF2B71F3AF6A300F1CCEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DKWebView/AppDelegate.h; sourceTree = "<group>"; };
+		6C6DF2B81F3AF6D600F1CCEC /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,13 +92,9 @@
 		6C4250871F3460DB00BCD710 /* webViewCompatible */ = {
 			isa = PBXGroup;
 			children = (
-				6C4250BA1F34615600BCD710 /* DZNWebViewController.h */,
-				6C4250BB1F34615600BCD710 /* DZNWebViewController.m */,
-				6C4250A51F34614300BCD710 /* TOWebViewController */,
-				6C42508B1F3460DB00BCD710 /* AppDelegate.h */,
-				6C42508C1F3460DB00BCD710 /* AppDelegate.m */,
-				6C4250BE1F34618C00BCD710 /* WebviewCompatibleTool.h */,
-				6C4250BF1F34618C00BCD710 /* WebviewCompatibleTool.m */,
+				6C6DF2B71F3AF6A300F1CCEC /* AppDelegate.h */,
+				6C6DF2B81F3AF6D600F1CCEC /* AppDelegate.m */,
+				6C6DF29B1F3AF68200F1CCEC /* DKWebView */,
 				6C42508E1F3460DB00BCD710 /* ViewController.h */,
 				6C42508F1F3460DB00BCD710 /* ViewController.m */,
 				6C4250911F3460DB00BCD710 /* Main.storyboard */,
@@ -116,33 +115,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		6C4250A51F34614300BCD710 /* TOWebViewController */ = {
-			isa = PBXGroup;
-			children = (
-				6C4250A61F34614300BCD710 /* NJKWebViewProgress */,
-				6C4250AB1F34614400BCD710 /* TOActivitySafari.h */,
-				6C4250AC1F34614400BCD710 /* TOActivitySafari.m */,
-				6C4250AD1F34614400BCD710 /* TOWebViewController.h */,
-				6C4250AE1F34614400BCD710 /* TOWebViewController.m */,
-				6C4250AF1F34614400BCD710 /* UIImage+TOWebViewControllerIcons.h */,
-				6C4250B01F34614400BCD710 /* UIImage+TOWebViewControllerIcons.m */,
-				6C4250B11F34614400BCD710 /* 说明.txt */,
-			);
-			name = TOWebViewController;
-			path = ../../TO/TOWebViewController;
-			sourceTree = "<group>";
-		};
-		6C4250A61F34614300BCD710 /* NJKWebViewProgress */ = {
-			isa = PBXGroup;
-			children = (
-				6C4250A71F34614300BCD710 /* NJKWebViewProgress.h */,
-				6C4250A81F34614300BCD710 /* NJKWebViewProgress.m */,
-				6C4250A91F34614300BCD710 /* NJKWebViewProgressView.h */,
-				6C4250AA1F34614400BCD710 /* NJKWebViewProgressView.m */,
-			);
-			path = NJKWebViewProgress;
-			sourceTree = "<group>";
-		};
 		6C4250C31F346DD800BCD710 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +122,38 @@
 				6C4250C41F346DD900BCD710 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C6DF29B1F3AF68200F1CCEC /* DKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				6C6DF29C1F3AF68200F1CCEC /* DKActivitySafari.h */,
+				6C6DF29D1F3AF68200F1CCEC /* DKActivitySafari.m */,
+				6C6DF29E1F3AF68200F1CCEC /* DKUIWebViewController.h */,
+				6C6DF29F1F3AF68200F1CCEC /* DKUIWebViewController.m */,
+				6C6DF2A01F3AF68200F1CCEC /* DKWebView.h */,
+				6C6DF2A11F3AF68200F1CCEC /* DKWKWebViewController.h */,
+				6C6DF2A21F3AF68200F1CCEC /* DKWKWebViewController.m */,
+				6C6DF2A31F3AF68200F1CCEC /* Info.plist */,
+				6C6DF2A41F3AF68200F1CCEC /* NJKWebViewProgress */,
+				6C6DF2A91F3AF68200F1CCEC /* ReadMe.txt */,
+				6C6DF2AA1F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.h */,
+				6C6DF2AB1F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.m */,
+				6C6DF2AC1F3AF68200F1CCEC /* WebviewCompatibleTool.h */,
+				6C6DF2AD1F3AF68200F1CCEC /* WebviewCompatibleTool.m */,
+			);
+			path = DKWebView;
+			sourceTree = "<group>";
+		};
+		6C6DF2A41F3AF68200F1CCEC /* NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				6C6DF2A51F3AF68200F1CCEC /* DKWebViewProgress.h */,
+				6C6DF2A61F3AF68200F1CCEC /* DKWebViewProgress.m */,
+				6C6DF2A71F3AF68200F1CCEC /* DKWebViewProgressView.h */,
+				6C6DF2A81F3AF68200F1CCEC /* DKWebViewProgressView.m */,
+			);
+			path = NJKWebViewProgress;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,9 +215,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C6DF2B11F3AF68200F1CCEC /* Info.plist in Resources */,
 				6C4250981F3460DB00BCD710 /* LaunchScreen.storyboard in Resources */,
 				6C4250951F3460DB00BCD710 /* Assets.xcassets in Resources */,
-				6C4250B71F34614400BCD710 /* 说明.txt in Resources */,
+				6C6DF2B41F3AF68200F1CCEC /* ReadMe.txt in Resources */,
 				6C4250931F3460DB00BCD710 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,16 +230,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C4250B21F34614400BCD710 /* NJKWebViewProgress.m in Sources */,
-				6C4250B61F34614400BCD710 /* UIImage+TOWebViewControllerIcons.m in Sources */,
-				6C4250B51F34614400BCD710 /* TOWebViewController.m in Sources */,
-				6C4250B31F34614400BCD710 /* NJKWebViewProgressView.m in Sources */,
+				6C6DF2B61F3AF68200F1CCEC /* WebviewCompatibleTool.m in Sources */,
+				6C6DF2AF1F3AF68200F1CCEC /* DKUIWebViewController.m in Sources */,
 				6C4250901F3460DB00BCD710 /* ViewController.m in Sources */,
-				6C4250B41F34614400BCD710 /* TOActivitySafari.m in Sources */,
-				6C42508D1F3460DB00BCD710 /* AppDelegate.m in Sources */,
-				6C4250BD1F34615600BCD710 /* DZNWebViewController.m in Sources */,
 				6C42508A1F3460DB00BCD710 /* main.m in Sources */,
-				6C4250C01F34618C00BCD710 /* WebviewCompatibleTool.m in Sources */,
+				6C6DF2B91F3AF6D600F1CCEC /* AppDelegate.m in Sources */,
+				6C6DF2AE1F3AF68200F1CCEC /* DKActivitySafari.m in Sources */,
+				6C6DF2B31F3AF68200F1CCEC /* DKWebViewProgressView.m in Sources */,
+				6C6DF2B51F3AF68200F1CCEC /* UIImage+DKWebViewControllerIcons.m in Sources */,
+				6C6DF2B01F3AF68200F1CCEC /* DKWKWebViewController.m in Sources */,
+				6C6DF2B21F3AF68200F1CCEC /* DKWebViewProgress.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

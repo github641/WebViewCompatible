@@ -1,5 +1,5 @@
 //
-//  UIImage+TOWebViewControllerIcons.h
+//  UIImage+DKWebViewControllerIcons.h
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -23,16 +23,16 @@
 #import <UIKit/UIKit.h>
 
 /* Keys for each of the theming properties */
-extern const NSString *TOWebViewControllerButtonTintColor;
-extern const NSString *TOWebViewControllerButtonBevelOpacity;
+extern const NSString *DKWebViewControllerButtonTintColor;
+extern const NSString *DKWebViewControllerButtonBevelOpacity;
 
-@interface UIImage (TOWebViewControllerIcons)
+@interface UIImage (DKWebViewControllerIcons)
 
 /* Navigation Buttons */
-+ (instancetype)TOWebViewControllerIcon_backButtonWithAttributes:(NSDictionary *)attributes;
-+ (instancetype)TOWebViewControllerIcon_forwardButtonWithAttributes:(NSDictionary *)attributes;
-+ (instancetype)TOWebViewControllerIcon_refreshButtonWithAttributes:(NSDictionary *)attributes;
-+ (instancetype)TOWebViewControllerIcon_stopButtonWithAttributes:(NSDictionary *)attributes;
-+ (instancetype)TOWebViewControllerIcon_actionButtonWithAttributes:(NSDictionary *)attributes;
++ (instancetype)DKWebViewControllerIcon_backButtonWithAttributes:(NSDictionary *)attributes;
++ (instancetype)DKWebViewControllerIcon_forwardButtonWithAttributes:(NSDictionary *)attributes;
++ (instancetype)DKWebViewControllerIcon_refreshButtonWithAttributes:(NSDictionary *)attributes;
++ (instancetype)DKWebViewControllerIcon_stopButtonWithAttributes:(NSDictionary *)attributes;
++ (instancetype)DKWebViewControllerIcon_actionButtonWithAttributes:(NSDictionary *)attributes;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  NJKWebViewProgressView.h
+//  DKWebViewProgressView.h
 // iOS 7 Style WebView Progress Bar
 //
 //  Created by Satoshi Aasano on 11/16/13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NJKWebViewProgressView : UIView
+@interface DKWebViewProgressView : UIView
 @property (nonatomic) float progress;
 
 @property (nonatomic) UIView *progressBarView;

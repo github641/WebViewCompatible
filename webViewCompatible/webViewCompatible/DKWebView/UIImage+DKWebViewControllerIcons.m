@@ -1,5 +1,5 @@
 //
-//  UIImage+TOWebViewControllerIcons.m
+//  UIImage+DKWebViewControllerIcons.m
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -21,10 +21,10 @@
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-#import "UIImage+TOWebViewControllerIcons.h"
+#import "UIImage+DKWebViewControllerIcons.h"
 
-const NSString *TOWebViewControllerButtonTintColor       = @"TOWebViewControllerButtonFillColor";
-const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewControllerButtonBevelOpacity";
+const NSString *DKWebViewControllerButtonTintColor       = @"DKWebViewControllerButtonFillColor";
+const NSString *DKWebViewControllerButtonBevelOpacity    = @"DKWebViewControllerButtonBevelOpacity";
 
 /* Default iOS 6 Theming Properties */
 #define DEFAULT_IPHONE_BUTTON_TINT [UIColor colorWithRed:1.0f green:1.0f blue:1.0f alpha:1.0f]
@@ -50,12 +50,12 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
 
 @end
 
-@implementation UIImage (TOWebViewControllerIcons)
+@implementation UIImage (DKWebViewControllerIcons)
 
 #pragma mark - Private Methods -
 + (UIColor *)fillColorFromAttributes:(NSDictionary *)attributes
 {
-    UIColor *fillColor = attributes[TOWebViewControllerButtonTintColor];
+    UIColor *fillColor = attributes[DKWebViewControllerButtonTintColor];
     if (fillColor == nil) {
         if (IPAD)
             fillColor = DEFAULT_IPAD_BUTTON_TINT;
@@ -68,7 +68,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
 
 + (CGFloat)bevelOpacityFromAttributes:(NSDictionary *)attributes
 {
-    NSNumber *opacityNumber = attributes[TOWebViewControllerButtonBevelOpacity];
+    NSNumber *opacityNumber = attributes[DKWebViewControllerButtonBevelOpacity];
     if (opacityNumber == nil) {
         if (IPAD)
             return DEFAULT_IPAD_BEVEL_OPACITY;
@@ -108,7 +108,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
 }
 
 #pragma mark - Navigation Buttons -
-+ (instancetype)TOWebViewControllerIcon_backButtonWithAttributes:(NSDictionary *)attributes
++ (instancetype)DKWebViewControllerIcon_backButtonWithAttributes:(NSDictionary *)attributes
 {
     UIImage *backButtonImage = nil;
     if (MINIMAL_UI) {
@@ -163,7 +163,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
     return backButtonImage;
 }
 
-+ (instancetype)TOWebViewControllerIcon_forwardButtonWithAttributes:(NSDictionary *)attributes
++ (instancetype)DKWebViewControllerIcon_forwardButtonWithAttributes:(NSDictionary *)attributes
 {
     UIImage *forwardButtonImage = nil;
     if (MINIMAL_UI) {
@@ -218,7 +218,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
     return forwardButtonImage;
 }
 
-+ (instancetype)TOWebViewControllerIcon_refreshButtonWithAttributes:(NSDictionary *)attributes
++ (instancetype)DKWebViewControllerIcon_refreshButtonWithAttributes:(NSDictionary *)attributes
 {
     UIImage *refreshButtonImage = nil;
     if (MINIMAL_UI) {
@@ -289,7 +289,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
     return refreshButtonImage;
 }
 
-+ (instancetype)TOWebViewControllerIcon_stopButtonWithAttributes:(NSDictionary *)attributes
++ (instancetype)DKWebViewControllerIcon_stopButtonWithAttributes:(NSDictionary *)attributes
 {
     UIImage *stopButtonImage = nil;
     if (MINIMAL_UI) {
@@ -359,7 +359,7 @@ const NSString *TOWebViewControllerButtonBevelOpacity    = @"TOWebViewController
     return stopButtonImage;
 }
 
-+ (instancetype)TOWebViewControllerIcon_actionButtonWithAttributes:(NSDictionary *)attributes
++ (instancetype)DKWebViewControllerIcon_actionButtonWithAttributes:(NSDictionary *)attributes
 {
     UIImage *actionButtonImage = nil;
     if (MINIMAL_UI) {

@@ -1,5 +1,5 @@
 //
-//  TOWebViewController.m
+//  DKUIWebViewController.m
 //
 //  Copyright 2013-2016 Timothy Oliver. All rights reserved.
 //
@@ -20,13 +20,13 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-#import "TOWebViewController.h"
-#import "TOActivitySafari.h"
+#import "DKUIWebViewController.h"
+#import "DKActivitySafari.h"
 
-#import "UIImage+TOWebViewControllerIcons.h"
+#import "UIImage+DKWebViewControllerIcons.h"
 
-#import "NJKWebViewProgress.h"
-#import "NJKWebViewProgressView.h"
+#import "DKWebViewProgress.h"
+#import "DKWebViewProgressView.h"
 
 #import <QuartzCore/QuartzCore.h>
 #import <MessageUI/MessageUI.h>
@@ -60,11 +60,11 @@
 
 #pragma mark -
 #pragma mark Hidden Properties/Methods
-@interface TOWebViewController () <UIActionSheetDelegate,
+@interface DKUIWebViewController () <UIActionSheetDelegate,
                                    UIPopoverControllerDelegate,
                                    MFMailComposeViewControllerDelegate,
                                    MFMessageComposeViewControllerDelegate,
-                                   NJKWebViewProgressDelegate,CAAnimationDelegate>
+                                   DKWebViewProgressDelegate,CAAnimationDelegate>
 {
     
     //The state of the UIWebView's scroll view before the rotation animation has started
@@ -91,7 +91,7 @@
 @property (nonatomic,readonly) UINavigationBar *navigationBar;        /* Navigation bar shown along the top of the view */
 @property (nonatomic,readonly) UIToolbar *toolbar;                    /* Toolbar shown along the bottom */
 @property (nonatomic,strong)   UIImageView *webViewRotationSnapshot;  /* A snapshot of the web view, shown when rotating */
-@property (nonatomic,strong)   NJKWebViewProgressView *progressView;  /* A bar that tracks the load progress of the current page. */
+@property (nonatomic,strong)   DKWebViewProgressView *progressView;  /* A bar that tracks the load progress of the current page. */
 
 @property (nonatomic,strong) CAGradientLayer *gradientLayer;          /* Gradient effect for the background view behind the web view. */
 
@@ -103,7 +103,7 @@
 @property (nonatomic,strong) UIBarButtonItem *doneButton;             /* The 'Done' button for modal contorllers */
 
 /* Load Progress Manager */
-@property (nonatomic,strong) NJKWebViewProgress *progressManager;
+@property (nonatomic,strong) DKWebViewProgress *progressManager;
 
 /* Images for the Reload/Stop button */
 @property (nonatomic,strong) UIImage *reloadIcon;
@@ -170,7 +170,7 @@
 // -------------------------------------------------------
 
 #pragma mark - Class Implementation -
-@implementation TOWebViewController
+@implementation DKUIWebViewController
 
 #pragma mark - Class Creation -
 - (instancetype)initWithCoder:(NSCoder *)aDecoder
@@ -223,7 +223,7 @@
     _showPageTitles   = YES;
     _initialLoad      = YES;
     
-    _progressManager = [[NJKWebViewProgress alloc] init];
+    _progressManager = [[DKWebViewProgress alloc] init];
     _progressManager.webViewProxyDelegate = self;
     _progressManager.progressDelegate = self;
     
@@ -267,7 +267,7 @@
     CGFloat progressBarHeight = LOADING_BAR_HEIGHT;
     CGRect navigationBarBounds = self.navigationController.navigationBar.bounds;
     CGRect barFrame = CGRectMake(0, navigationBarBounds.size.height - progressBarHeight, navigationBarBounds.size.width, progressBarHeight);
-    self.progressView = [[NJKWebViewProgressView alloc] initWithFrame:barFrame];
+    self.progressView = [[DKWebViewProgressView alloc] initWithFrame:barFrame];
     self.progressView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     if (self.loadingBarTintColor)
         self.progressView.progressBarView.backgroundColor = self.loadingBarTintColor;
@@ -282,22 +282,22 @@
 {
     //set up the back button
     if (self.backButton == nil) {
-        UIImage *backButtonImage = [UIImage TOWebViewControllerIcon_backButtonWithAttributes:self.buttonThemeAttributes];
+        UIImage *backButtonImage = [UIImage DKWebViewControllerIcon_backButtonWithAttributes:self.buttonThemeAttributes];
         self.backButton = [[UIBarButtonItem alloc] initWithImage:backButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(backButtonTapped:)];
         self.backButton.tintColor = self.buttonTintColor;
     }
     
     //set up the forward button
     if (self.forwardButton == nil) {
-        UIImage *forwardButtonImage = [UIImage TOWebViewControllerIcon_forwardButtonWithAttributes:self.buttonThemeAttributes];
+        UIImage *forwardButtonImage = [UIImage DKWebViewControllerIcon_forwardButtonWithAttributes:self.buttonThemeAttributes];
         self.forwardButton  = [[UIBarButtonItem alloc] initWithImage:forwardButtonImage style:UIBarButtonItemStylePlain target:self action:@selector(forwardButtonTapped:)];
         self.forwardButton.tintColor = self.buttonTintColor;
     }
     
     //set up the reload button
     if (self.reloadStopButton == nil) {
-        self.reloadIcon = [UIImage TOWebViewControllerIcon_refreshButtonWithAttributes:self.buttonThemeAttributes];
-        self.stopIcon   = [UIImage TOWebViewControllerIcon_stopButtonWithAttributes:self.buttonThemeAttributes];
+        self.reloadIcon = [UIImage DKWebViewControllerIcon_refreshButtonWithAttributes:self.buttonThemeAttributes];
+        self.stopIcon   = [UIImage DKWebViewControllerIcon_stopButtonWithAttributes:self.buttonThemeAttributes];
         
         self.reloadStopButton = [[UIBarButtonItem alloc] initWithImage:self.reloadIcon style:UIBarButtonItemStylePlain target:self action:@selector(reloadStopButtonTapped:)];
         self.reloadStopButton.tintColor = self.buttonTintColor;
@@ -724,7 +724,7 @@
         if (self.buttonThemeAttributes == nil)
             self.buttonThemeAttributes = [NSMutableDictionary dictionary];
         
-        self.buttonThemeAttributes[TOWebViewControllerButtonTintColor] = _buttonTintColor;
+        self.buttonThemeAttributes[DKWebViewControllerButtonTintColor] = _buttonTintColor;
         [self setUpNavigationButtons];
     }
 }
@@ -739,7 +739,7 @@
     if (self.buttonThemeAttributes == nil)
         self.buttonThemeAttributes = [NSMutableDictionary dictionary];
     
-    self.buttonThemeAttributes[TOWebViewControllerButtonBevelOpacity] = @(_buttonBevelOpacity);
+    self.buttonThemeAttributes[DKWebViewControllerButtonBevelOpacity] = @(_buttonBevelOpacity);
     [self setUpNavigationButtons];
 }
 
@@ -810,7 +810,7 @@
 }
 
 #pragma mark - Progress Delegate -
--(void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress
+-(void)webViewProgress:(DKWebViewProgress *)webViewProgress updateProgress:(float)progress
 {
     [self.progressView setProgress:progress animated:YES];
     
@@ -893,7 +893,7 @@
         self.title = url;
     }
     else if (self.showPageTitles) {
-        self.title = NSLocalizedStringFromTable(@"Loading...", @"TOWebViewControllerLocalizable", @"Loading...");
+        self.title = NSLocalizedStringFromTable(@"Loading...", @"DKUIWebViewControllerLocalizable", @"Loading...");
     }
 }
 
@@ -954,7 +954,7 @@
     }
     // If we're on iOS 6 or above, we can use the super-duper activity view controller :)
     if (NSClassFromString(@"UIPresentationController")) {
-        NSArray *browserActivities = @[[TOActivitySafari new]];
+        NSArray *browserActivities = @[[DKActivitySafari new]];
         UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.url] applicationActivities:browserActivities];
         activityViewController.modalPresentationStyle = UIModalPresentationPopover;
         activityViewController.popoverPresentationController.barButtonItem = self.actionButton;
@@ -963,7 +963,7 @@
     }
     else if (NSClassFromString(@"UIActivityViewController"))
     {
-        NSArray *browserActivities = @[[TOActivitySafari new]];
+        NSArray *browserActivities = @[[DKActivitySafari new]];
         UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[self.url] applicationActivities:browserActivities];
         
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

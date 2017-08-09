@@ -1,19 +1,19 @@
 //
-//  NJKWebViewProgress.m
+//  DKWebViewProgress.m
 //
 //  Created by Satoshi Aasano on 4/20/13.
 //  Copyright (c) 2013 Satoshi Asano. All rights reserved.
 //
 
-#import "NJKWebViewProgress.h"
+#import "DKWebViewProgress.h"
 
-NSString *completeRPCURLPath = @"/njkwebviewprogressproxy/complete";
+NSString *completeRPCURLPath = @"/DKwebviewprogressproxy/complete";
 
-const float NJKInitialProgressValue = 0.1f;
-const float NJKInteractiveProgressValue = 0.5f;
-const float NJKFinalProgressValue = 0.9f;
+const float DKInitialProgressValue = 0.1f;
+const float DKInteractiveProgressValue = 0.5f;
+const float DKFinalProgressValue = 0.9f;
 
-@implementation NJKWebViewProgress
+@implementation DKWebViewProgress
 {
     NSUInteger _loadingCount;
     NSUInteger _maxLoadCount;
@@ -33,15 +33,15 @@ const float NJKFinalProgressValue = 0.9f;
 
 - (void)startProgress
 {
-    if (_progress < NJKInitialProgressValue) {
-        [self setProgress:NJKInitialProgressValue];
+    if (_progress < DKInitialProgressValue) {
+        [self setProgress:DKInitialProgressValue];
     }
 }
 
 - (void)incrementProgress
 {
     float progress = self.progress;
-    float maxProgress = _interactive ? NJKFinalProgressValue : NJKInteractiveProgressValue;
+    float maxProgress = _interactive ? DKFinalProgressValue : DKInteractiveProgressValue;
     float remainPercent = (float)_loadingCount / (float)_maxLoadCount;
     float increment = (maxProgress - progress) * remainPercent;
     progress += increment;

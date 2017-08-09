@@ -11,10 +11,10 @@
 #import <SafariServices/SafariServices.h>
 
 #import "WebviewCompatibleTool.h"
-#import "TOWebViewController.h"
-#import "DZNWebViewController.h"
+#import "DKUIWebViewController.h"
+#import "DKWKWebViewController.h"
 
-#import "TOActivitySafari.h"
+//#import "TOActivitySafari.h"
 
 #import "Macro.h"
 
@@ -43,12 +43,12 @@
     
     // 判断，当前显示的控制器是否有 navi管理：有则push，无则present
     
-//    [WebviewCompatibleTool from:self toWebBrowserWithPush:NO url:s];
+    [WebviewCompatibleTool from:self toWebBrowserWithPush:NO url:s];
     
-   SFSafariViewController *vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:s]];
-    [self presentViewController:vc animated:YES completion:nil];
-    
-    vc.delegate = self;
+//   SFSafariViewController *vc = [[SFSafariViewController alloc] initWithURL:[NSURL URLWithString:s]];
+//    [self presentViewController:vc animated:YES completion:nil];
+//    
+//    vc.delegate = self;
 }
 
 
@@ -59,12 +59,12 @@
  @param title the title of the web page.
  @result Returns an array of UIActivity instances that will be appended to UIActivityViewController.
  */
-- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
-    NSLog(@"%s url:%@ title:%@", __func__, URL, title);
-    
-    return  @[[TOActivitySafari new]];
-
-}
+//- (NSArray<UIActivity *> *)safariViewController:(SFSafariViewController *)controller activityItemsForURL:(NSURL *)URL title:(nullable NSString *)title{
+//    NSLog(@"%s url:%@ title:%@", __func__, URL, title);
+//    
+//    return  @[[DKActivitySafari new]];
+//
+//}
 
 /*! @abstract Delegate callback called when the user taps the Done button. Upon this call, the view controller is dismissed modally. */
 - (void)safariViewControllerDidFinish:(SFSafariViewController *)controller{

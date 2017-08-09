@@ -38,6 +38,8 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSString *s= @"https://www.baidu.com";
         s = @"http://toutiao.eastday.com/?qid=diazh";
+    s = @"http://www.alldk.com";
+//    s = @"https://itunes.apple.com/cn/app/itranslate-converse/id1241264761?mt=8";
     
     // 判断，当前显示的控制器是否有 navi管理：有则push，无则present
     
